@@ -22,7 +22,7 @@
         "Segoe UI", sans-serif;
 }
 
-/* Dark theme overrides */
+/* Dark theme overrides – applied on body */
 body[data-theme="dark"] {
     --bg: #020617;
     --bg-elevated: #020617;
@@ -46,10 +46,17 @@ body[data-theme="dark"] {
     box-sizing: border-box;
 }
 
-html,
+html {
+    margin: 0;
+    padding: 0;
+    /* html ke plain background rakhlam, sob theme body cover korbe */
+    background: #000;
+}
+
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh; /* FULL viewport cover */
     font-family: var(--font-sans);
     color: var(--text-main);
     background: radial-gradient(circle at top left, #eef2ff, var(--bg));
@@ -57,6 +64,7 @@ body {
     transition: background 0.25s ease, color 0.25s ease;
 }
 
+/* pure dark gradient, no halka white */
 body[data-theme="dark"] {
     background: radial-gradient(circle at top left, #020617, #020617);
 }
@@ -978,7 +986,6 @@ main.main-loaded {
 
 /* ====== Dark mode readability fixes ====== */
 
-/* All primary boxes */
 body[data-theme="dark"] .card,
 body[data-theme="dark"] .card-simple,
 body[data-theme="dark"] .about-card,
@@ -991,7 +998,6 @@ body[data-theme="dark"] .contact-box {
     border-color: #1f2937;
 }
 
-/* Card-type hover in dark */
 body[data-theme="dark"] .card:hover,
 body[data-theme="dark"] .card-simple:hover,
 body[data-theme="dark"] .about-card:hover,
@@ -1001,26 +1007,22 @@ body[data-theme="dark"] .post-card:hover {
     border-color: rgba(34, 197, 94, 0.5);
 }
 
-/* Highlight / CTA section */
 body[data-theme="dark"] .highlight-section {
     background: linear-gradient(135deg, #020617, #020617);
     border-top: 1px solid #1f2937;
     border-bottom: 1px solid #1f2937;
 }
 
-/* Footer in dark */
 body[data-theme="dark"] .site-footer {
     background: #020617;
     border-top: 1px solid #1f2937;
 }
 
-/* Contact box on opportunities */
 body[data-theme="dark"] .contact-box {
     background: #020617;
     border-color: #1f2937;
 }
 
-/* Filter + nav hover tuned for dark */
 body[data-theme="dark"] .filter-btn:hover {
     background: rgba(15, 23, 42, 0.9);
     border-color: #22c55e;
@@ -1032,7 +1034,7 @@ body[data-theme="dark"] .nav-link:hover {
     color: var(--accent);
 }
 
-/* ====== Responsive tweaks ====== */
+/* ====== Responsive ====== */
 
 @media (max-width: 880px) {
     .hero-inner {
@@ -1098,32 +1100,4 @@ body[data-theme="dark"] .nav-link:hover {
         max-width: 100%;
         height: 38px;
     }
-}
-
-/* ========= FINAL DARK MODE OVERRIDE ========= */
-
-body[data-theme="dark"],
-body[data-theme="dark"] html {
-    background: #020617 !important;
-    background-color: #020617 !important;
-}
-
-/* All main layout blocks dark */
-body[data-theme="dark"] main,
-body[data-theme="dark"] .page-hero,
-body[data-theme="dark"] .section,
-body[data-theme="dark"] .site-footer {
-    background: #020617 !important;
-    background-color: #020617 !important;
-}
-
-/* Inside containers transparent */
-body[data-theme="dark"] .page-hero .container,
-body[data-theme="dark"] .section .container {
-    background: transparent !important;
-}
-
-/* Hero section also dark-backed */
-body[data-theme="dark"] .hero-home {
-    background: #020617 !important;
 }
