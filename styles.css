@@ -1163,3 +1163,132 @@ body[data-theme="dark"] .welcome-label {
     background: rgba(34, 197, 94, 0.18);
     color: #bbf7d0;
 }
+/* ===== About page contact profile ===== */
+
+.contact-profile {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-profile-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 1.2rem;
+    border-radius: var(--radius-lg);
+    background: var(--bg-elevated);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.contact-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #ecfdf3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(20, 83, 45, 0.45);
+}
+
+.contact-profile-body {
+    flex: 1;
+}
+
+.contact-name {
+    margin: 0 0 0.15rem;
+    font-size: 1rem;
+}
+
+.contact-role {
+    margin: 0 0 0.6rem;
+    font-size: 0.86rem;
+    color: var(--text-muted);
+}
+
+.contact-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.6rem;
+    font-size: 0.88rem;
+}
+
+.contact-links li {
+    margin-bottom: 0.25rem;
+}
+
+.contact-label {
+    font-weight: 600;
+    margin-right: 0.25rem;
+}
+
+.contact-links a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+.contact-note {
+    margin: 0;
+    font-size: 0.84rem;
+    color: var(--text-muted);
+}
+
+/* Dark mode version */
+body[data-theme="dark"] .contact-profile-card {
+    background: #020617;
+    border-color: #1f2937;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.75);
+}
+/* ===== Contact title icon + animation ===== */
+
+.contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    margin-right: 0.5rem;
+    background: var(--accent-soft);
+    box-shadow: 0 6px 14px rgba(20, 83, 45, 0.25);
+    vertical-align: middle;
+    animation: contact-float 2.4s ease-in-out infinite;
+}
+
+.contact-icon-inner {
+    font-size: 0.9rem;
+}
+
+/* soft float animation */
+@keyframes contact-float {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 6px 14px rgba(20, 83, 45, 0.25);
+    }
+    50% {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 22px rgba(20, 83, 45, 0.35);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 6px 14px rgba(20, 83, 45, 0.25);
+    }
+}
+
+/* Dark mode tweak so icon সুন্দর দেখায় */
+body[data-theme="dark"] .contact-icon {
+    background: rgba(34, 197, 94, 0.15);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
+}
