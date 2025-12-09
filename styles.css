@@ -2091,11 +2091,12 @@ body[data-theme="dark"] .header-search:focus-within {
     border-color: rgba(52, 211, 153, 0.85);
     box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.4);
 }
+/* Header ta একটু wider, যাতে Theme আর ডানে যায় */
 .site-header .container {
-    max-width: 100%;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    max-width: 1200px;   /* চাইলে 1280 বা 1400 করেও দেখতে পারো */
 }
+
+
 
 
 
