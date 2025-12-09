@@ -5,6 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DUCO – Team</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* Styling the team role icons */
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .card-icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #3498db;
+            color: white;
+            font-size: 18px;
+        }
+
+        .card {
+            background-color: #2c3e50;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            color: white;
+            transition: box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .card-list li {
+            font-size: 16px;
+            color: #bdc3c7;
+        }
+
+        /* Specific icon styles */
+        .card-icon-lead { background-color: #e74c3c; }
+        .card-icon-postdoc { background-color: #f39c12; }
+        .card-icon-student { background-color: #1abc9c; }
+        .card-icon-visitor { background-color: #9b59b6; }
+    </style>
 </head>
 <body data-theme="light">
 <header class="site-header">
@@ -48,6 +103,7 @@
         <div class="container cards-grid">
             <article class="card">
                 <div class="card-header">
+                    <span class="card-icon card-icon-lead">L</span>
                     <h3 class="card-title">Lead / PI</h3>
                 </div>
                 <p class="card-text">
@@ -62,6 +118,7 @@
 
             <article class="card">
                 <div class="card-header">
+                    <span class="card-icon card-icon-postdoc">P</span>
                     <h3 class="card-title">Postdoctoral researchers</h3>
                 </div>
                 <p class="card-text">
@@ -75,6 +132,7 @@
 
             <article class="card">
                 <div class="card-header">
+                    <span class="card-icon card-icon-student">S</span>
                     <h3 class="card-title">PhD students</h3>
                 </div>
                 <p class="card-text">
@@ -88,6 +146,7 @@
 
             <article class="card">
                 <div class="card-header">
+                    <span class="card-icon card-icon-visitor">V</span>
                     <h3 class="card-title">Visitors & alumni</h3>
                 </div>
                 <p class="card-text">
@@ -97,8 +156,6 @@
         </div>
     </section>
 </main>
-
-
 
 <script src="script.js"></script>
 </body>
