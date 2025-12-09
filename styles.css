@@ -1852,6 +1852,27 @@ body[data-theme="dark"] .header-search-inner:focus-within {
 .theme-toggle {
     flex-shrink: 0;
 }
+@media (max-width: 720px) {
+    .header-inner {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .header-search {
+        order: 2;
+        flex: 1 0 100%;
+        margin-top: 0.4rem;
+        justify-content: flex-start;
+    }
+}
+
 
 
 
