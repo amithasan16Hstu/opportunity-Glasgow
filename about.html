@@ -34,7 +34,15 @@
     </div>
 </header>
 
-
+<!-- Global welcome bar -->
+<div class="welcome-bar">
+    <div class="container welcome-bar-inner">
+        <span class="welcome-label">Welcome</span>
+        <p class="welcome-static">
+            Welcome to DUCO – a research group on robust, data-driven decision-making at the University of Glasgow.
+        </p>
+    </div>
+</div>
 
 <main>
     <!-- About hero -->
@@ -100,15 +108,10 @@
                 </p>
             </div>
 
-            <div class="contact-profile">
-                <article class="contact-profile-card">
-                    <!-- decorative glow line -->
-                    <span class="contact-glow"></span>
-
-                    <div class="contact-header-row">
-                        <div class="contact-avatar">
-                            YN
-                        </div>
+            <div class="contact-card-wrapper">
+                <article class="contact-card">
+                    <div class="contact-card-header">
+                        <div class="contact-avatar-lg">YN</div>
                         <div>
                             <h3 class="contact-name">Your Name</h3>
                             <p class="contact-role">
@@ -118,39 +121,44 @@
                         </div>
                     </div>
 
-                    <div class="contact-details-grid">
-                        <a class="contact-chip" href="mailto:your.name@glasgow.ac.uk">
-                            <span class="chip-icon">📧</span>
-                            <span class="chip-text">
-                                <span class="chip-label">Email</span>
-                                <span class="chip-value">your.name@glasgow.ac.uk</span>
-                            </span>
-                        </a>
-
-                        <a class="contact-chip" href="tel:+440000000000">
-                            <span class="chip-icon">📞</span>
-                            <span class="chip-text">
-                                <span class="chip-label">Phone</span>
-                                <span class="chip-value">+44 (0)00 0000 0000</span>
-                            </span>
-                        </a>
-
-                        <a class="contact-chip" href="https://www.linkedin.com/in/your-profile" target="_blank">
-                            <span class="chip-icon">💼</span>
-                            <span class="chip-text">
-                                <span class="chip-label">LinkedIn</span>
-                                <span class="chip-value">linkedin.com/in/your-profile</span>
-                            </span>
-                        </a>
-
-                        <a class="contact-chip" href="https://t.me/yourtelegram" target="_blank">
-                            <span class="chip-icon">📨</span>
-                            <span class="chip-text">
-                                <span class="chip-label">Telegram</span>
-                                <span class="chip-value">@yourtelegram</span>
-                            </span>
-                        </a>
-                    </div>
+                    <ul class="contact-info-list">
+                        <li>
+                            <span class="contact-info-icon">📧</span>
+                            <div class="contact-info-text">
+                                <span class="contact-info-label">Email</span>
+                                <a href="mailto:your.name@glasgow.ac.uk" class="contact-info-value">
+                                    your.name@glasgow.ac.uk
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-info-icon">📞</span>
+                            <div class="contact-info-text">
+                                <span class="contact-info-label">Phone</span>
+                                <a href="tel:+440000000000" class="contact-info-value">
+                                    +44 (0)00 0000 0000
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-info-icon">💼</span>
+                            <div class="contact-info-text">
+                                <span class="contact-info-label">LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="contact-info-value">
+                                    linkedin.com/in/your-profile
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-info-icon">📨</span>
+                            <div class="contact-info-text">
+                                <span class="contact-info-label">Telegram</span>
+                                <a href="https://t.me/yourtelegram" target="_blank" class="contact-info-value">
+                                    @yourtelegram
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
 
                     <p class="contact-note">
                         Feel free to include a short self-introduction and 2–3 sentences about your research interests
@@ -162,7 +170,11 @@
     </section>
 </main>
 
-
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <span>© <span id="year"></span> All rights reserved.</span>
+    </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
