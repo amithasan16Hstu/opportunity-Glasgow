@@ -1032,17 +1032,6 @@ body[data-theme="dark"] .nav-link:hover {
     color: var(--accent);
 }
 
-/* IMPORTANT: full sections dark on About / Team / News / Posts */
-body[data-theme="dark"] .page-hero,
-body[data-theme="dark"] .section {
-    background: #020617;
-}
-
-/* Hero section also dark-backed */
-body[data-theme="dark"] .hero-home {
-    background: #020617;
-}
-
 /* ====== Responsive tweaks ====== */
 
 @media (max-width: 880px) {
@@ -1109,4 +1098,32 @@ body[data-theme="dark"] .hero-home {
         max-width: 100%;
         height: 38px;
     }
+}
+
+/* ========= FINAL DARK MODE OVERRIDE ========= */
+
+body[data-theme="dark"],
+body[data-theme="dark"] html {
+    background: #020617 !important;
+    background-color: #020617 !important;
+}
+
+/* All main layout blocks dark */
+body[data-theme="dark"] main,
+body[data-theme="dark"] .page-hero,
+body[data-theme="dark"] .section,
+body[data-theme="dark"] .site-footer {
+    background: #020617 !important;
+    background-color: #020617 !important;
+}
+
+/* Inside containers transparent */
+body[data-theme="dark"] .page-hero .container,
+body[data-theme="dark"] .section .container {
+    background: transparent !important;
+}
+
+/* Hero section also dark-backed */
+body[data-theme="dark"] .hero-home {
+    background: #020617 !important;
 }
