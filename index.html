@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-theme="light">
+
+<!-- ===== Header ===== -->
 <header class="site-header">
     <div class="container header-inner">
         <a href="index.html" class="brand">
@@ -26,9 +28,9 @@
             <a href="posts.html" class="nav-link">Posts</a>
         </nav>
 
-        <!-- 🔍 Header search (new compact pill with icon) -->
-        <div class="header-search">
-            <div class="header-search-inner">
+        <div class="header-right">
+            <!-- 🔍 Header search pill -->
+            <div class="header-search">
                 <span class="header-search-icon">🔍</span>
                 <input
                     type="search"
@@ -38,24 +40,26 @@
                     aria-label="Search DUCO site"
                 />
             </div>
-        </div>
 
-        <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">
-            <span class="theme-toggle-icon sun">☀</span>
-            <span class="theme-toggle-icon moon">🌙</span>
-            <span class="theme-toggle-label">Theme</span>
-        </button>
+            <!-- Theme toggle -->
+            <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+                <span class="theme-toggle-icon sun">☀</span>
+                <span class="theme-toggle-icon moon">🌙</span>
+                <span class="theme-toggle-label">Theme</span>
+            </button>
+        </div>
     </div>
 </header>
+<!-- ===== End header ===== -->
 
-<!-- 🔔 GLOBAL WELCOME / NEWS BAR – copy this to every page -->
+<!-- 🔔 GLOBAL WELCOME / NEWS BAR -->
 <div class="welcome-bar">
     <div class="container welcome-bar-inner">
         <span class="welcome-label">Welcome</span>
         <div class="welcome-ticker">
             <span class="welcome-ticker-text">
-                Welcome to DUCO – a research group on robust, data-driven decision-making at the University of Glasgow. 
-                We work on control, optimisation, and machine learning to make safer decisions under uncertainty. 
+                Welcome to DUCO – a research group on robust, data-driven decision-making at the University of Glasgow.
+                We work on control, optimisation, and machine learning to make safer decisions under uncertainty.
                 • Students and collaborators from all countries are welcome to discuss projects and funding ideas.
             </span>
         </div>
