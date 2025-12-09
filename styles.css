@@ -1660,12 +1660,7 @@ body[data-theme="dark"] .contact-card::before {
 body[data-theme="dark"] .contact-info-icon {
     background: #02081b;
 }
-.contact-name {
-    margin: 0 0 0.1rem;
-    font-size: 1.25rem;      /* নামটা একটু বড় */
-    font-weight: 700;
-    line-height: 1.25;
-    white-space: nowrap;     /* "Your Name" আর ভেঙে ২ লাইনে যাবে না */
-}
+
+
 
 
