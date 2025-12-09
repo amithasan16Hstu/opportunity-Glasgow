@@ -1682,6 +1682,54 @@ body[data-theme="dark"] .contact-info-icon {
     fill: #ecfdf3;
 }
 
+/* ===== Header search ===== */
+
+.header-search {
+    flex: 0 0 210px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-search-input {
+    width: 100%;
+    max-width: 210px;
+    padding: 0.32rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-subtle);
+    font-size: 0.82rem;
+    color: var(--text-main);
+    background: var(--bg-elevated);
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.header-search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.header-search-input:focus {
+    border-color: #9ec5ff;
+    box-shadow: 0 0 0 1px #bfd8ff;
+}
+
+/* small screens এ header search নিচে চলে যাবে */
+@media (max-width: 720px) {
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    .header-search {
+        order: 3;
+        flex: 1 0 100%;
+        margin-top: 0.4rem;
+        justify-content: flex-start;
+    }
+
+    .header-search-input {
+        max-width: 100%;
+    }
+}
+
 
 
 
