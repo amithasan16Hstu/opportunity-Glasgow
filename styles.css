@@ -1479,3 +1479,185 @@ body[data-theme="dark"] .contact-chip:hover {
     border-color: rgba(34, 197, 94, 0.7);
     box-shadow: 0 14px 32px rgba(0, 0, 0, 0.85);
 }
+/* ===== Contact title icon (small animation) ===== */
+
+.contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    margin-right: 0.5rem;
+    background: var(--accent-soft);
+    box-shadow: 0 6px 14px rgba(20, 83, 45, 0.25);
+    vertical-align: middle;
+    animation: contact-float 2.4s ease-in-out infinite;
+}
+
+.contact-icon-inner {
+    font-size: 0.9rem;
+}
+
+@keyframes contact-float {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 6px 14px rgba(20, 83, 45, 0.25);
+    }
+    50% {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 22px rgba(20, 83, 45, 0.35);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 6px 14px rgba(20, 83, 45, 0.25);
+    }
+}
+
+body[data-theme="dark"] .contact-icon {
+    background: rgba(34, 197, 94, 0.15);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== About page contact card ===== */
+
+.contact-card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.2rem 1.4rem 1.1rem;
+    border-radius: var(--radius-lg);
+    background: var(--bg-elevated);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle gradient highlight at top */
+.contact-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: -50%;
+    height: 120px;
+    background: radial-gradient(circle at 0 0, rgba(34,197,94,0.18), transparent 60%);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.contact-card-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.9rem;
+}
+
+.contact-avatar-lg {
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #ecfdf3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    box-shadow: 0 10px 24px rgba(20, 83, 45, 0.5);
+}
+
+.contact-name {
+    margin: 0 0 0.15rem;
+    font-size: 1.05rem;
+}
+
+.contact-role {
+    margin: 0;
+    font-size: 0.86rem;
+    color: var(--text-muted);
+}
+
+/* contact info list */
+
+.contact-info-list {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.4rem 1rem;
+}
+
+.contact-info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+}
+
+.contact-info-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    background: var(--bg-muted);
+    flex-shrink: 0;
+}
+
+.contact-info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.7;
+    margin-bottom: 0.05rem;
+}
+
+.contact-info-value {
+    font-size: 0.86rem;
+    text-decoration: none;
+    color: var(--accent);
+}
+
+.contact-info-value:hover {
+    text-decoration: underline;
+}
+
+.contact-note {
+    position: relative;
+    margin: 0;
+    font-size: 0.84rem;
+    color: var(--text-muted);
+}
+
+/* dark mode tweaks */
+
+body[data-theme="dark"] .contact-card {
+    background: #020617;
+    border-color: #1f2937;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+body[data-theme="dark"] .contact-card::before {
+    background: radial-gradient(circle at 0 0, rgba(34,197,94,0.35), transparent 60%);
+}
+
+body[data-theme="dark"] .contact-info-icon {
+    background: #02081b;
+}
+
