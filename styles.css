@@ -1102,3 +1102,64 @@ body[data-theme="dark"] .nav-link:hover {
     }
 }
 
+/* ===== Global welcome / news bar ===== */
+
+.welcome-bar {
+    border-bottom: 1px solid var(--border-subtle);
+    background: var(--bg-elevated);
+}
+
+.welcome-bar-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.4rem 0;
+    font-size: 0.8rem;
+}
+
+.welcome-label {
+    padding: 0.1rem 0.55rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+}
+
+.welcome-ticker {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.welcome-ticker-text {
+    display: inline-block;
+    padding-left: 100%;
+    /* news er moto scroll hobe */
+    animation: welcome-ticker 25s linear infinite;
+    color: var(--text-muted);
+}
+
+/* scrolling animation */
+@keyframes welcome-ticker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Dark theme adjust */
+body[data-theme="dark"] .welcome-bar {
+    background: #020617;
+    border-bottom-color: #1f2937;
+}
+
+body[data-theme="dark"] .welcome-label {
+    background: rgba(34, 197, 94, 0.18);
+    color: #bbf7d0;
+}
