@@ -2095,6 +2095,19 @@ body[data-theme="dark"] .header-search:focus-within {
 .site-header .container {
     max-width: 1200px;   /* চাইলে 1280 বা 1400 করেও দেখতে পারো */
 }
+/* Allow header content to take full width */
+.site-header .container {
+    max-width: 100%;  /* Allow it to stretch full width */
+    padding-left: 2rem;  /* Add padding to prevent it from touching the edges */
+    padding-right: 2rem;
+}
+
+.site-header .header-inner {
+    display: flex;
+    justify-content: space-between;  /* Push elements to the left and right */
+    align-items: center;
+}
+
 
 
 
