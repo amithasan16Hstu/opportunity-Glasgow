@@ -1661,6 +1661,27 @@ body[data-theme="dark"] .contact-info-icon {
     background: #02081b;
 }
 
+/* avatar circle */
+.contact-avatar-lg {
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #ecfdf3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 10px 24px rgba(20, 83, 45, 0.5);
+}
+
+/* big SVG icon inside circle */
+.contact-avatar-lg .avatar-icon {
+    width: 60%;
+    height: 60%;
+    fill: #ecfdf3;
+}
+
 
 
 
