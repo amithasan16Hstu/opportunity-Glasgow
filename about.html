@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DUCO – About</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="light">
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="brand">
+            <span class="brand-logo">YN</span>
+            <span class="brand-text">
+                <span class="brand-title">DUCO</span>
+                <span class="brand-subtitle">Decision-making under uncertainty</span>
+            </span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link nav-link-active">About</a>
+            <a href="team.html" class="nav-link">Team</a>
+            <a href="opportunities.html" class="nav-link">Opportunities</a>
+            <a href="news.html" class="nav-link">News</a>
+            <a href="posts.html" class="nav-link">Posts</a>
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+            <span class="theme-toggle-icon sun">☀</span>
+            <span class="theme-toggle-icon moon">🌙</span>
+            <span class="theme-toggle-label">Theme</span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">About DUCO</h1>
+            <p class="page-subtitle">
+                A research group on robust, data-driven decision-making at the University of Glasgow.
+            </p>
+            <p class="page-text">
+                DUCO sits at the intersection of control, optimisation, and machine learning.
+                We are interested in algorithms that can reason about uncertainty and still make
+                transparent, reliable decisions in practice.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container about-grid">
+            <article class="about-card">
+                <h3>Research philosophy</h3>
+                <ul>
+                    <li>Start from real decision problems and data.</li>
+                    <li>Use theory to understand limits and guarantees.</li>
+                    <li>Prototype tools that practitioners can actually use.</li>
+                </ul>
+            </article>
+
+            <article class="about-card">
+                <h3>Methods we like</h3>
+                <ul>
+                    <li>Model predictive control (MPC)</li>
+                    <li>Stochastic & robust optimisation</li>
+                    <li>Probabilistic modelling and Bayesian inference</li>
+                    <li>Safe reinforcement learning</li>
+                </ul>
+            </article>
+
+            <article class="about-card">
+                <h3>How we work</h3>
+                <ul>
+                    <li>Collaborative supervision and mentoring.</li>
+                    <li>Open, reproducible code and datasets where possible.</li>
+                    <li>Regular reading groups and project meetings.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <span>© <span id="year"></span> All rights reserved.</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

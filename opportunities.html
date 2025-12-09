@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DUCO – Opportunities</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="light">
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="brand">
+            <span class="brand-logo">YN</span>
+            <span class="brand-text">
+                <span class="brand-title">DUCO</span>
+                <span class="brand-subtitle">Decision-making under uncertainty</span>
+            </span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="team.html" class="nav-link">Team</a>
+            <a href="opportunities.html" class="nav-link nav-link-active">Opportunities</a>
+            <a href="news.html" class="nav-link">News</a>
+            <a href="posts.html" class="nav-link">Posts</a>
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+            <span class="theme-toggle-icon sun">☀</span>
+            <span class="theme-toggle-icon moon">🌙</span>
+            <span class="theme-toggle-label">Theme</span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <!-- Page intro / hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title" id="opportunities">Opportunities</h1>
+            <p class="page-subtitle">
+                Funding and research opportunities for joint applications and collaborations.
+            </p>
+            <p class="page-text">
+                Even when there are no fully funded openings, there are many fellowships and scholarships
+                we can apply for together. If you’re interested, send an email including:
+            </p>
+            <ul class="page-list">
+                <li>Short description of your background and research interests</li>
+                <li>Academic CV and publication list (if available)</li>
+                <li>Any links to code, portfolio, or previous projects</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Filters + search -->
+    <section class="filters">
+        <div class="container filters-inner">
+            <div class="filter-buttons">
+                <button class="filter-btn filter-btn-active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="postdoc">Postdoc</button>
+                <button class="filter-btn" data-filter="phd">PhD</button>
+                <button class="filter-btn" data-filter="master">Master</button>
+                <button class="filter-btn" data-filter="visit">Visit / Short stay</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by keyword, country, or program name..."
+                    aria-label="Search opportunities"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Opportunities list -->
+    <section class="opportunities">
+        <div class="container">
+            <h2 class="section-title">Current funding ideas</h2>
+            <p class="section-subtitle">
+                These schemes usually require a joint proposal. Deadlines and details can change,
+                so always check the official website.
+            </p>
+
+            <div class="cards-grid" id="cardsGrid">
+                <!-- Card 1 -->
+                <article class="card" data-type="postdoc" data-keywords="europe marie curie postdoctoral global fellowship">
+                    <div class="card-header">
+                        <h3 class="card-title">Marie Skłodowska-Curie Postdoctoral Fellowships</h3>
+                        <span class="badge badge-open">Open for proposals</span>
+                    </div>
+                    <p class="card-meta">
+                        <span class="meta-item">Type: Postdoc</span>
+                        <span class="meta-separator">•</span>
+                        <span class="meta-item">Region: Europe / Global mobility</span>
+                    </p>
+                    <p class="card-text">
+                        Highly competitive fellowships supporting 1–2 year postdoctoral research in Europe
+                        with strong emphasis on mobility, training, and interdisciplinarity.
+                    </p>
+                    <ul class="card-list">
+                        <li>Requires joint host supervisor and project proposal</li>
+                        <li>Supports salary, research costs, and travel</li>
+                        <li>Suitable for candidates with a recent PhD</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="https://marie-sklodowska-curie-actions.ec.europa.eu" target="_blank" class="card-link">
+                            View official call
+                        </a>
+                        <span class="deadline">Typical deadline: Sept (annually)</span>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card" data-type="postdoc" data-keywords="south korea nrf overseas postdoctoral fellowship asia">
+                    <div class="card-header">
+                        <h3 class="card-title">NRF Postdoctoral Overseas Fellowship</h3>
+                        <span class="badge badge-open">Planned</span>
+                    </div>
+                    <p class="card-meta">
+                        <span class="meta-item">Type: Postdoc</span>
+                        <span class="meta-separator">•</span>
+                        <span class="meta-item">Region: South Korea → Abroad</span>
+                    </p>
+                    <p class="card-text">
+                        National Research Foundation program for Korean researchers wanting to conduct
+                        postdoctoral research at an overseas institution.
+                    </p>
+                    <ul class="card-list">
+                        <li>Applicant must be eligible according to NRF criteria</li>
+                        <li>We co-design a research plan aligned with your track record</li>
+                        <li>Supports stay at host institution and research activities</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="https://www.nrf.re.kr" target="_blank" class="card-link">
+                            Program information
+                        </a>
+                        <span class="deadline">Deadline: varies by call</span>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card" data-type="phd" data-keywords="uk phd engineering james watt school glasgow scholarship">
+                    <div class="card-header">
+                        <h3 class="card-title">James Watt School of Engineering PhD Studentships</h3>
+                        <span class="badge badge-limited">Limited calls</span>
+                    </div>
+                    <p class="card-meta">
+                        <span class="meta-item">Type: PhD</span>
+                        <span class="meta-separator">•</span>
+                        <span class="meta-item">Location: UK</span>
+                    </p>
+                    <p class="card-text">
+                        Competitive PhD scholarships in engineering and computing, with projects on
+                        decision-making, optimization, and data-driven control.
+                    </p>
+                    <ul class="card-list">
+                        <li>Strong quantitative background required</li>
+                        <li>We co-develop a proposal aligned with school priorities</li>
+                        <li>Some schemes cover both tuition and stipend</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="https://www.gla.ac.uk/schools/engineering/" target="_blank" class="card-link">
+                            School website
+                        </a>
+                        <span class="deadline">Next calls: check website</span>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card" data-type="phd" data-keywords="uk ukri phd studentship dtu uk research innovation">
+                    <div class="card-header">
+                        <h3 class="card-title">UKRI PhD Studentships</h3>
+                        <span class="badge badge-open">Ongoing schemes</span>
+                    </div>
+                    <p class="card-meta">
+                        <span class="meta-item">Type: PhD</span>
+                        <span class="meta-separator">•</span>
+                        <span class="meta-item">Location: UK (various universities)</span>
+                    </p>
+                    <p class="card-text">
+                        Nationally funded PhD positions through UK Research and Innovation (UKRI), usually
+                        advertised via doctoral training centers or project-specific calls.
+                    </p>
+                    <ul class="card-list">
+                        <li>We identify suitable calls and craft a strong proposal</li>
+                        <li>Often include training, secondments, and cohort activities</li>
+                        <li>Open to both UK and international students in many cases</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="https://www.findaphd.com/" target="_blank" class="card-link">
+                            Browse UKRI-funded projects
+                        </a>
+                        <span class="deadline">Deadlines vary</span>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="card" data-type="phd" data-keywords="leverhulme doctoral scholarship programme interdisciplinary">
+                    <div class="card-header">
+                        <h3 class="card-title">Leverhulme Doctoral Scholarships</h3>
+                        <span class="badge badge-limited">Highly competitive</span>
+                    </div>
+                    <p class="card-meta">
+                        <span class="meta-item">Type: PhD</span>
+                        <span class="meta-separator">•</span>
+                        <span class="meta-item">Region: UK</span>
+                    </p>
+                    <p class="card-text">
+                        Interdisciplinary doctoral programs funded by the Leverhulme Trust. Projects often
+                        link engineering, social science, and data science.
+                    </p>
+                    <ul class="card-list">
+                        <li>We match your profile to an available thematic program</li>
+                        <li>Strong academic records and curiosity are essential</li>
+                        <li>Typically provide full funding for four years</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="https://www.leverhulme.ac.uk" target="_blank" class="card-link">
+                            Learn more
+                        </a>
+                        <span class="deadline">Program-specific</span>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="card" data-type="phd" data-keywords="china scholarship council csc joint phd master funding">
+                    <div class="card-header">
+                        <h3 class="card-title">China Scholarship Council (CSC)</h3>
+                        <span class="badge badge-open">Popular option</span>
+                    </div>
+                    <p class="card-meta">
+                        <span class="meta-item">Type: PhD / Master</span>
+                        <span class="meta-separator">•</span>
+                        <span class="meta-item">Region: China → Abroad</span>
+                    </p>
+                    <p class="card-text">
+                        CSC scholarships support Chinese students and staff for overseas postgraduate
+                        study and joint PhD programs.
+                    </p>
+                    <ul class="card-list">
+                        <li>Requires institutional agreement and supervisor support</li>
+                        <li>We prepare a research plan and letter of invitation</li>
+                        <li>Funding usually covers tuition and living costs</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="https://www.gla.ac.uk" target="_blank" class="card-link">
+                            Example host information
+                        </a>
+                        <span class="deadline">Early-year deadlines</span>
+                    </div>
+                </article>
+
+                <!-- Card 7: self-funded -->
+                <article class="card" data-type="visit" data-keywords="self funded visit research stay short term master phd">
+                    <div class="card-header">
+                        <h3 class="card-title">Self-funded Study or Research Visit</h3>
+                        <span class="badge badge-custom">Flexible</span>
+                    </div>
+                    <p class="card-meta">
+                        <span class="meta-item">Type: Visit / Self-funded degree</span>
+                        <span class="meta-separator">•</span>
+                        <span class="meta-item">Location: By arrangement</span>
+                    </p>
+                    <p class="card-text">
+                        If you have your own scholarship or institutional funding, short research visits
+                        or self-funded PhD/Master arrangements can be discussed.
+                    </p>
+                    <ul class="card-list">
+                        <li>Typical duration: from a few months to multiple years</li>
+                        <li>We align your project with ongoing research in the group</li>
+                        <li>Email with details of your funding and preferred timeline</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="card-link card-link-disabled">
+                            Contact by email for details
+                        </span>
+                        <span class="deadline">Timeline: case-by-case</span>
+                    </div>
+                </article>
+
+                <!-- Card 8: placeholder when no calls -->
+                <article class="card card-muted" data-type="other" data-keywords="no open positions placeholder">
+                    <div class="card-header">
+                        <h3 class="card-title">No fully funded positions currently advertised</h3>
+                        <span class="badge badge-muted">Status</span>
+                    </div>
+                    <p class="card-text">
+                        At the moment, there are no guaranteed funded openings for new team members.
+                        However, if you strongly resonate with the research topics above, it is still
+                        worth getting in touch — many opportunities only become visible once we talk.
+                    </p>
+                </article>
+            </div>
+
+            <p class="empty-message" id="emptyMessage" hidden>
+                No opportunities match your current filter and search. Try another keyword or filter.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact / footer info -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">How to get in touch</h2>
+            <p class="section-subtitle">
+                If you believe your profile fits the themes above, feel free to email a short intro and CV.
+            </p>
+            <div class="contact-box">
+                <p class="contact-text">
+                    When you write, briefly mention:
+                </p>
+                <ul class="contact-list">
+                    <li>Your current position and institution</li>
+                    <li>Your main research interests (2–3 sentences)</li>
+                    <li>How you see the fit with my research group</li>
+                    <li>Which of the schemes above you are interested in</li>
+                </ul>
+                <p class="contact-text">
+                    A short, focused email is much more effective than a generic template.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <span>© <span id="year"></span> All rights reserved.</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

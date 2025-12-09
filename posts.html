@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DUCO – Posts</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="light">
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="brand">
+            <span class="brand-logo">YN</span>
+            <span class="brand-text">
+                <span class="brand-title">DUCO</span>
+                <span class="brand-subtitle">Decision-making under uncertainty</span>
+            </span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="team.html" class="nav-link">Team</a>
+            <a href="opportunities.html" class="nav-link">Opportunities</a>
+            <a href="news.html" class="nav-link">News</a>
+            <a href="posts.html" class="nav-link nav-link-active">Posts</a>
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+            <span class="theme-toggle-icon sun">☀</span>
+            <span class="theme-toggle-icon moon">🌙</span>
+            <span class="theme-toggle-label">Theme</span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Posts & notes</h1>
+            <p class="page-subtitle">
+                Informal write-ups, slides, and short technical notes.
+            </p>
+            <p class="page-text">
+                You can later link each post card to a separate markdown/HTML page or an
+                external blog if you prefer.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container posts-grid">
+            <article class="post-card">
+                <span class="post-tag post-tag-soft">Note</span>
+                <h3>Why uncertainty should be visible in decision tools</h3>
+                <p>
+                    A short reflection on communicating uncertainty to practitioners.
+                </p>
+                <span class="post-meta">Blog draft</span>
+            </article>
+
+            <article class="post-card">
+                <span class="post-tag">Slides</span>
+                <h3>Intro to data-driven control (lecture slides)</h3>
+                <p>
+                    Link to teaching material for students interested in the area.
+                </p>
+                <span class="post-meta">Teaching</span>
+            </article>
+
+            <article class="post-card">
+                <span class="post-tag">Code</span>
+                <h3>Example repository for robust MPC experiments</h3>
+                <p>
+                    Minimal code example you can share on GitHub.
+                </p>
+                <span class="post-meta">GitHub link</span>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <span>© <span id="year"></span> All rights reserved.</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

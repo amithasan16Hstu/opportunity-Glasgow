@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DUCO – News</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="light">
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="brand">
+            <span class="brand-logo">YN</span>
+            <span class="brand-text">
+                <span class="brand-title">DUCO</span>
+                <span class="brand-subtitle">Decision-making under uncertainty</span>
+            </span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="team.html" class="nav-link">Team</a>
+            <a href="opportunities.html" class="nav-link">Opportunities</a>
+            <a href="news.html" class="nav-link nav-link-active">News</a>
+            <a href="posts.html" class="nav-link">Posts</a>
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+            <span class="theme-toggle-icon sun">☀</span>
+            <span class="theme-toggle-icon moon">🌙</span>
+            <span class="theme-toggle-label">Theme</span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">News</h1>
+            <p class="page-subtitle">
+                Announcements, paper acceptances, grants, and other short updates.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container posts-grid">
+            <article class="post-card">
+                <span class="post-tag">Grant</span>
+                <h3>New project on uncertainty-aware control funded</h3>
+                <p>
+                    Short description of the new project, partners, and main aims.
+                </p>
+                <span class="post-meta">June 2025</span>
+            </article>
+
+            <article class="post-card">
+                <span class="post-tag">Award</span>
+                <h3>Best paper prize at Conference XYZ</h3>
+                <p>
+                    Brief note about the paper and co-authors.
+                </p>
+                <span class="post-meta">May 2025</span>
+            </article>
+
+            <article class="post-card">
+                <span class="post-tag post-tag-soft">Service</span>
+                <h3>Organising committee roles</h3>
+                <p>
+                    PC/OC roles in relevant conferences, workshops, or journals.
+                </p>
+                <span class="post-meta">Ongoing</span>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <span>© <span id="year"></span> All rights reserved.</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
