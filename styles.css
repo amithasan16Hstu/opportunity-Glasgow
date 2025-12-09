@@ -1032,6 +1032,17 @@ body[data-theme="dark"] .nav-link:hover {
     color: var(--accent);
 }
 
+/* IMPORTANT: full sections dark on About / Team / News / Posts */
+body[data-theme="dark"] .page-hero,
+body[data-theme="dark"] .section {
+    background: #020617;
+}
+
+/* Hero section also dark-backed */
+body[data-theme="dark"] .hero-home {
+    background: #020617;
+}
+
 /* ====== Responsive tweaks ====== */
 
 @media (max-width: 880px) {
