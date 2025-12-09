@@ -1872,6 +1872,160 @@ body[data-theme="dark"] .header-search-inner:focus-within {
         justify-content: flex-start;
     }
 }
+/* ===== Header / Nav ====== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(14px);
+    background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.98),
+        rgba(15, 23, 42, 0.94)
+    );
+    border-bottom: 1px solid rgba(30, 64, 175, 0.5);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    gap: 1.5rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    gap: 0.7rem;
+    flex-shrink: 0;
+}
+
+/* brand logo, title etc. আগের মতই থাকলে ঠিক আছে */
+
+/* nav center এ, এক লাইনে */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    flex: 1 1 auto;
+    justify-content: center;
+    flex-wrap: nowrap;
+    min-width: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 0.86rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    color: var(--text-muted);
+    transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.nav-link:hover {
+    background: rgba(37, 99, 235, 0.12);
+    color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.nav-link-active {
+    background: var(--accent);
+    color: #f9fafb;
+    font-weight: 500;
+}
+
+/* right side: search + theme একসাথে গ্রুপ */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+}
+
+/* ===== Header search (pill) ===== */
+
+.header-search {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    max-width: 210px;
+    width: 210px;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease,
+        background 0.15s ease, transform 0.1s ease;
+}
+
+.header-search-icon {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.header-search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.8rem;
+    color: #e5e7eb;
+    width: 100%;
+    padding: 0;
+}
+
+.header-search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.header-search:hover {
+    border-color: rgba(96, 165, 250, 0.9);
+}
+
+.header-search:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+    background: rgba(15, 23, 42, 0.98);
+    transform: translateY(-1px);
+}
+
+/* Theme toggle যেন shrink না হয় */
+.theme-toggle {
+    flex-shrink: 0;
+}
+
+/* ===== Responsive tweaks ===== */
+
+@media (max-width: 720px) {
+    .header-inner {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        row-gap: 0.35rem;
+    }
+
+    .header-right {
+        order: 2;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .header-search {
+        flex: 1 1 auto;
+        max-width: 100%;
+    }
+}
+
 
 
 
