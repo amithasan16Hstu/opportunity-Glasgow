@@ -1818,6 +1818,41 @@ body[data-theme="dark"] .header-search-inner:focus-within {
         max-width: 100%;
     }
 }
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    gap: 1rem;
+}
+
+/* brand যেন compress না হয় */
+.brand {
+    flex-shrink: 0;
+}
+
+/* nav সবসময় এক লাইনে থাকবে */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1 1 auto;        /* মাঝের জায়গা দখল করবে */
+    justify-content: center;
+    flex-wrap: nowrap;      /* IMPORTANT: আর লাইন ভাঙবে না */
+    min-width: 0;
+}
+/* search area ছোট, ডানদিকে ফিক্সড থাকবে */
+.header-search {
+    flex: 0 0 200px;        /* চাইলে 180–220px করে adjust করতে পারো */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* theme button যেন সাইজ ধরে রাখে */
+.theme-toggle {
+    flex-shrink: 0;
+}
+
 
 
 
