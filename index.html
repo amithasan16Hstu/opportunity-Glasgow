@@ -5,6 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DUCO – Home</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- Add FontAwesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Chat Icon Styling */
+        .chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 24px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;  /* Ensure it appears above other elements */
+        }
+
+        .chat-icon:hover {
+            background-color: #2980b9;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Chat Window Styling */
+        .chat-window {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #fff;
+            color: #333;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            display: none;  /* Hidden by default */
+            z-index: 1001;  /* Ensure it's above the chat icon */
+        }
+
+        .chat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .chat-header button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            color: #3498db;
+        }
+
+        #chatInput {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            color: #333;
+        }
+
+        button {
+            margin-top: 10px;
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body data-theme="light">
 <header class="site-header">
@@ -41,7 +122,7 @@
     </div>
 </header>
 
-<!-- 🔔 GLOBAL WELCOME / NEWS BAR -->
+<!-- 🔔 GLOBAL WELCOME / NEWS BAR – copy this to every page -->
 <div class="welcome-bar">
     <div class="container welcome-bar-inner">
         <span class="welcome-label">Welcome</span>
@@ -54,6 +135,7 @@
         </div>
     </div>
 </div>
+<!-- 🔔 END GLOBAL WELCOME BAR -->
 
 <main>
     <!-- Hero -->
@@ -113,33 +195,143 @@
         </div>
     </section>
 
-    <!-- Chat Icon -->
-    <div class="chat-icon">
-        <a href="javascript:void(0);" onclick="openChat()">
-            <img src="chat-icon.png" alt="Chat Icon">
-        </a>
-    </div>
+    <!-- Quick links -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What you can find here</h2>
+                <p class="section-subtitle">
+                    Use the navigation to explore who we are, what we do, and how to collaborate.
+                </p>
+            </div>
 
-    <div id="chatWindow" class="chat-window">
-        <textarea placeholder="Type your message..." rows="5"></textarea>
-        <button>Send</button>
-    </div>
+            <div class="cards-grid">
+                <article class="card-simple">
+                    <h3>About</h3>
+                    <p>Overview of DUCO, our philosophy, and the domains we focus on.</p>
+                </article>
+                <article class="card-simple">
+                    <h3>Team</h3>
+                    <p>Small, multi-disciplinary group across control, optimisation, and ML.</p>
+                </article>
+                <article class="card-simple">
+                    <h3>Opportunities</h3>
+                    <p>Funding schemes and ways to join as a student, postdoc, or visitor.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
+    <!-- Highlight (link to opportunities) -->
+    <section class="section highlight-section">
+        <div class="container highlight-inner">
+            <div>
+                <h2 class="section-title">Interested in joining?</h2>
+                <p class="section-subtitle">
+                    We often apply together for fellowships and studentships rather than waiting
+                    for a single advertised position.
+                </p>
+            </div>
+            <div class="highlight-actions">
+                <a href="opportunities.html" class="btn btn-primary">
+                    View current funding ideas
+                </a>
+                <p class="highlight-note">
+                    Early contact is very helpful – even if deadlines are months away.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posts preview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Recent notes & posts</h2>
+                <p class="section-subtitle">
+                    Short updates about new papers, talks, and workshops. Replace these with your own items.
+                </p>
+            </div>
+
+            <div class="posts-grid">
+                <article class="post-card">
+                    <span class="post-tag">Paper</span>
+                    <h3>Robust MPC with learned models accepted at XYZ</h3>
+                    <p>
+                        A framework that blends model uncertainty sets with learning-based predictions.
+                    </p>
+                    <span class="post-meta">June 2025</span>
+                </article>
+
+                <article class="post-card">
+                    <span class="post-tag post-tag-soft">Talk</span>
+                    <h3>Invited seminar on uncertainty-aware control</h3>
+                    <p>
+                        Slides and recording from a recent seminar with several case studies.
+                    </p>
+                    <span class="post-meta">April 2025</span>
+                </article>
+
+                <article class="post-card">
+                    <span class="post-tag">Workshop</span>
+                    <h3>Mini-workshop on learning for control</h3>
+                    <p>
+                        A one-day event bringing together researchers from control, ML and optimisation.
+                    </p>
+                    <span class="post-meta">February 2025</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact style box -->
+    <section class="section">
+        <div class="container contact-home-inner">
+            <div>
+                <h2 class="section-title">Get in touch</h2>
+                <p class="section-subtitle">
+                    If our research areas resonate with your interests, feel free to reach out
+                    with a short email and CV.
+                </p>
+            </div>
+            <div class="contact-home-box">
+                <p class="contact-home-text">When writing, briefly include:</p>
+                <ul class="contact-home-list">
+                    <li>Your current position and institution</li>
+                    <li>2–3 sentences on your research interests</li>
+                    <li>How you see the fit with DUCO</li>
+                    <li>Any relevant links (papers, code, portfolio)</li>
+                </ul>
+                <p class="contact-home-text">
+                    A focused message makes it much easier to spot a potential match.
+                </p>
+            </div>
+        </div>
+    </section>
 </main>
+
+<!-- Floating Chat Icon -->
+<div class="chat-icon" onclick="openChatWindow()">
+    <i class="fas fa-comments"></i> <!-- FontAwesome chat icon -->
+</div>
+
+<!-- Chat Window Modal -->
+<div id="chatWindow" class="chat-window">
+    <div class="chat-header">
+        <h4>Chat with us</h4>
+        <button onclick="closeChatWindow()">X</button>
+    </div>
+    <textarea placeholder="Type your message here..." id="chatInput" rows="4"></textarea>
+    <button onclick="sendMessage()">Send</button>
+</div>
 
 <footer class="site-footer">
     <div class="container footer-inner">
-        <span>© <span id="year"></span> All rights reserved. | Developed by Amit Hasan Sikder</span>
+        <span>© <span id="year"></span> All rights reserved. | Developed By Amit Hasan Sikder</span>
     </div>
 </footer>
 
 <script src="script.js"></script>
-<script>
-    function openChat() {
-        const chatWindow = document.getElementById('chatWindow');
-        chatWindow.style.display = 'block';
-    }
-</script>
 
 </body>
 </html>
