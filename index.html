@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DUCO – Home</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* Floating chat icon styling */
+        .chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 24px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chat-icon:hover {
+            background-color: #2980b9;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .chat-icon:active {
+            transform: translateY(2px);
+        }
+
+        .chat-icon i {
+            margin: 0;
+        }
+    </style>
 </head>
 <body data-theme="light">
 <header class="site-header">
@@ -229,6 +258,11 @@
     </section>
 </main>
 
+<!-- Floating Chat Icon -->
+<div class="chat-icon">
+    <i class="fas fa-comment"></i>
+</div>
+
 <footer class="site-footer">
     <div class="container footer-inner">
         <span>© <span id="year"></span> All rights reserved. | Developed By Amit Hasan Sikder</span>
@@ -238,4 +272,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
