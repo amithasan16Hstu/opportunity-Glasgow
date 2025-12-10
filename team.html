@@ -56,20 +56,28 @@
             color: #bdc3c7;
         }
 
+        /* Styling for the new "Learn More" button */
         .learn-more-btn {
             display: inline-block;
-            padding: 10px 20px;
-            margin-top: 10px;
-            background-color: #3498db;
+            padding: 12px 25px;
+            margin-top: 15px;
+            background: linear-gradient(45deg, #ff6ec7, #ff9a8b); /* Gradient background */
             color: white;
-            border-radius: 5px;
-            text-decoration: none;
             font-size: 16px;
-            transition: background-color 0.3s ease;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.4s ease-in-out;
+            text-align: center;
         }
 
         .learn-more-btn:hover {
-            background-color: #2980b9;
+            background: linear-gradient(45deg, #ff9a8b, #ff6ec7); /* Reversed gradient on hover */
+            transform: translateY(-5px); /* Slight lift effect */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+        }
+
+        .learn-more-btn:active {
+            transform: translateY(0); /* Removes lift when clicked */
         }
 
         /* Specific icon styles */
